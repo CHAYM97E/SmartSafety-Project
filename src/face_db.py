@@ -5,7 +5,8 @@ import torch
 import numpy as np
 from torchvision import transforms
 
-def load_face_database(face_model, mtcnn, known_faces_path="/home/ubuntu/SafeZone-AI/data/known_faces"):
+def load_face_database(face_model, mtcnn, known_faces_path=r"C:\Users\ADMIN\Desktop\Projet_Info\Safe-ZoneAI\data\known_faces"):
+    print("Chemin utilisé pour known_faces:", known_faces_path)
     face_db = {}
     for person_name in os.listdir(known_faces_path):
         person_path = os.path.join(known_faces_path, person_name)

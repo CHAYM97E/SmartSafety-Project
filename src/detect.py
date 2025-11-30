@@ -16,10 +16,16 @@ face_db = None
 # === Fonction d'initialisation ===
 def init_models():
     global yolo_model, face_model, mtcnn, face_db
-    yolo_model = YOLO("/home/ubuntu/SafeZone-AI/models/best.pt")
+    yolo_model = YOLO("yolov8n.pt")
     face_model = InceptionResnetV1(pretrained='vggface2').eval()
     mtcnn = MTCNN(keep_all=True)
-    face_db = load_face_database(face_model, mtcnn)
+    face_db = load_face_database(
+    face_model,
+    mtcnn,
+    known_faces_path=r"C:\Users\ADMIN\Desktop\Projet_Info\Safe-ZoneAI\data\known_faces"
+)
+   
+
 
 def detect(frame):
     global yolo_model, face_model, mtcnn, face_db
