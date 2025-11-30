@@ -1,24 +1,14 @@
-# Guide de Contribution pour SafeZone AI
+# Guide de Contribution pour SmartSafety-Project
 
-Nous sommes ravis que vous souhaitiez contribuer au projet SafeZone AI ! Vos contributions sont précieuses pour améliorer ce système de sécurité en temps réel.
+Nous sommes ravis que vous souhaitiez contribuer au projet SmartSafety-Project  ! Vos contributions sont précieuses pour améliorer ce système de sécurité en temps réel.
 
 Ce document décrit les lignes directrices pour contribuer au projet. En contribuant, vous acceptez de respecter ce guide.
 
 ## Comment Contribuer
 
-### 1. Signaler des Bugs
 
-Si vous trouvez un bug, veuillez ouvrir une [nouvelle issue](https://github.com/votre_utilisateur/SafeZone-AI/issues) sur GitHub. Avant de soumettre une nouvelle issue, veuillez vérifier si une issue similaire n'existe pas déjà.
 
-Lorsque vous signalez un bug, veuillez inclure :
-
-*   Une description claire et concise du bug.
-*   Les étapes pour reproduire le bug.
-*   Le comportement attendu et le comportement actuel.
-*   Des captures d'écran ou des logs si possible.
-*   Votre environnement (système d'exploitation, version de Python, dépendances).
-
-### 2. Suggérer des Fonctionnalités
+### 1. Suggérer des Fonctionnalités
 
 Nous sommes ouverts aux nouvelles idées et améliorations. Si vous avez une suggestion de fonctionnalité, veuillez ouvrir une [nouvelle issue](https://github.com/votre_utilisateur/SafeZone-AI/issues) sur GitHub.
 
@@ -28,7 +18,7 @@ Lorsque vous suggérez une fonctionnalité, veuillez inclure :
 *   Pourquoi cette fonctionnalité serait utile pour le projet.
 *   Des exemples d'utilisation si possible.
 
-### 3. Soumettre des Pull Requests (PRs)
+### 2. Soumettre des Pull Requests (PRs)
 
 Pour les contributions de code, veuillez suivre les étapes suivantes :
 
@@ -55,15 +45,6 @@ Pour les contributions de code, veuillez suivre les étapes suivantes :
     ```bash
     git commit -m "feat: Ajouter une nouvelle fonctionnalité X"
     ```
-
-    Types de commits recommandés (inspirés de Conventional Commits) :
-    *   `feat`: Nouvelle fonctionnalité
-    *   `fix`: Correction de bug
-    *   `docs`: Changements de documentation
-    *   `style`: Formatage, points-virgules manquants, etc. (pas de changement de code)
-    *   `refactor`: Refactoring du code (pas de changement de fonctionnalité ni de bug)
-    *   `test`: Ajout de tests manquants ou correction de tests existants
-    *   `chore`: Mises à jour de la construction, des dépendances, etc.
 
 7.  **Poussez vos modifications** vers votre fork sur GitHub :
 
