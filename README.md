@@ -1,12 +1,12 @@
-# SafeZone AI – Real-Time Safety Detection System
+# SmartSafety – recommendations, predictions, and smarter real-time detection
 
 ## Project Overview
 
-**SafeZone AI** is an innovative solution designed to enhance safety in industrial environments, particularly in companies dealing with chemical products. This system leverages artificial intelligence for real-time detection of personal protective equipment (PPE) and identification of authorized personnel in sensitive areas. The main objective is to prevent incidents by immediately alerting in case of non-compliance or unauthorized intrusion.
+**SmartSafety** is an innovative solution designed to enhance safety in industrial environments, particularly in companies dealing with chemical products. This system leverages artificial intelligence for real-time detection of personal protective equipment (PPE) and identification of authorized personnel in sensitive areas. The main objective is to prevent incidents by immediately alerting in case of non-compliance or unauthorized intrusion.
 
 ## Client Context
 
-This project addresses the needs of a Tunisian industrial company aiming to strengthen on-site safety. The key requirements include:
+This project addresses the needs of a moroccan industrial company OCP SAFI aiming to strengthen on-site safety. The key requirements include:
 
 * **Automated Monitoring:** Use of existing surveillance cameras for continuous detection.
 * **Anomaly Detection:** Automatic identification of missing PPE (helmet, vest, glasses) and unauthorized individuals.
@@ -49,9 +49,7 @@ The interactive dashboard is built using **Streamlit** or **Gradio** (in this im
 
 * **Database:** **SQLite** (or PostgreSQL for larger deployments) is used to store encoded faces, alert logs, and history of videos (or links to local files).
 
-## Future Enhancements
 
-Possible future improvements include integration with real-time alert systems via **Twilio** (for SMS/calls) or a **Telegram Bot** to instantly notify the security team of incidents.
 
 ## Dashboard Screenshots
 
@@ -90,7 +88,7 @@ Below are some previews of the SafeZone AI dashboard, showcasing its monitoring 
 
 3. **Prepare AI Models:**
 
-    Ensure the YOLOv8 model (`best.pt`) is placed in the `models/` folder.
+    Ensure the existence of YOLOv8 model .
 
 4. **Prepare the Face Database:**
 
@@ -113,7 +111,7 @@ Below are some previews of the SafeZone AI dashboard, showcasing its monitoring 
 
 
 ```
-SafeZone-AI/
+SmartSafety-Project/
 ├── src/
 │ ├── app.py # Main Flask application
 │ ├── detect.py # YOLOv8 detection logic
@@ -127,12 +125,12 @@ SafeZone-AI/
 │ ├── script.js # JavaScript for frontend interactions
 │ ├── style.css # CSS styles for the frontend
 ├── models/
-│ ├── best.pt # Trained YOLOv8 model
+│ ├── best.pt # Trained YOLOv8 model # optional
 ├── data/
 │ ├── known_faces/ # Images of authorized individuals
 │ ├── log.csv # Alert logs file
 ├── notebooks/
-│ ├── model.ipynb # Jupyter notebook for training/experiments
+│ ├── model.ipynb # Jupyter notebook for training/experiments # optional
 ├── docs/
 │ ├── images/ # Documentation screenshots and images
 ├── requirements.txt # Python dependencies
@@ -152,7 +150,9 @@ Contributions are welcome! Please follow these steps:
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).  
+You are free to use, modify, and distribute this project under the terms of the GPLv3.  
+For more details, see the `LICENSE` file included with this repository.
 
 ## Contact
 
