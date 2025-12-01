@@ -1,4 +1,7 @@
-/* Variables de couleur */
+/* ========================================
+   VARIABLES DE COULEUR
+   Définition des couleurs principales utilisées dans toute l'application
+   ======================================== */
 :root {
     --primary: #1e3a8a;
     --secondary: #1f2937;
@@ -11,7 +14,10 @@
     --gradient: linear-gradient(90deg, #1e3a8a, #3b82f6);
 }
 
-/* Général */
+/* ========================================
+   STYLES GÉNÉRAUX
+   Configuration de base du body et du mode sombre
+   ======================================== */
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--light);
@@ -20,11 +26,13 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Mode sombre - Activation */
 body.dark-mode {
     background-color: var(--dark);
     color: #e5e7eb;
 }
 
+/* Mode sombre - Cartes, filtres et tableaux */
 body.dark-mode .card,
 body.dark-mode .filters,
 body.dark-mode .table {
@@ -32,21 +40,27 @@ body.dark-mode .table {
     color: #e5e7eb;
 }
 
+/* Mode sombre - Fond des en-têtes de tableau */
 body.dark-mode .table-dark {
     background-color: #374151;
 }
 
+/* Mode sombre - Texte atténué */
 body.dark-mode .text-muted {
     color: #9ca3af;
 }
 
+/* Conteneur principal avec largeur maximale */
 .container-fluid {
     max-width: 1600px;
     margin: 0 auto;
     padding-top: 70px; /* Ajustement pour l'en-tête fixe */
 }
 
-/* En-tête */
+/* ========================================
+   EN-TÊTE (HEADER)
+   Barre de navigation fixe en haut de la page
+   ======================================== */
 header {
     background: var(--gradient);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -59,12 +73,14 @@ header {
     padding: 0.75rem 1.5rem;
 }
 
+/* Titre de l'en-tête */
 header h1 {
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
+/* Boutons de l'en-tête */
 header .btn-outline-light {
     border-color: rgba(255, 255, 255, 0.8);
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -73,11 +89,13 @@ header .btn-outline-light {
     border-width: 2px;
 }
 
+/* Effet hover sur les boutons */
 header .btn-outline-light:hover {
     background-color: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.9);
 }
 
+/* Menu déroulant dans l'en-tête */
 header .dropdown-menu {
     background-color: var(--secondary);
     border: none;
@@ -85,18 +103,23 @@ header .dropdown-menu {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Items du menu déroulant */
 header .dropdown-item {
     color: #e5e7eb;
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
 }
 
+/* Effet hover sur les items du menu */
 header .dropdown-item:hover {
     background-color: #374151;
     color: #ffffff;
 }
 
-/* Cartes statistiques */
+/* ========================================
+   CARTES STATISTIQUES
+   Cartes affichant les statistiques principales
+   ======================================== */
 .card {
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 12px;
@@ -105,16 +128,19 @@ header .dropdown-item:hover {
     overflow: hidden;
 }
 
+/* Cartes en mode sombre */
 body.dark-mode .card {
     background: linear-gradient(135deg, #1f2937, #2a2f3d);
     border-color: rgba(255, 255, 255, 0.05);
 }
 
+/* Effet de survol sur les cartes - Légère élévation */
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Titre des cartes */
 .card .card-title {
     font-size: 1rem;
     font-weight: 500;
@@ -124,6 +150,7 @@ body.dark-mode .card {
     margin-bottom: 0.5rem;
 }
 
+/* Chiffres principaux dans les cartes */
 .card .display-5 {
     font-size: 2rem;
     font-weight: 700;
@@ -131,12 +158,16 @@ body.dark-mode .card {
     margin-bottom: 0.25rem;
 }
 
+/* Texte secondaire dans les cartes */
 .card .text-muted {
     font-size: 0.875rem;
     display: block;
 }
 
-/* Filtres */
+/* ========================================
+   FILTRES
+   Section de filtrage des données
+   ======================================== */
 .filters {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
@@ -146,11 +177,13 @@ body.dark-mode .card {
     padding: 1.5rem;
 }
 
+/* Filtres en mode sombre */
 body.dark-mode .filters {
     background-color: #1f2937;
     border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Icônes/labels des champs de filtre */
 .filters .input-group-text {
     background-color: var(--primary);
     color: white;
@@ -161,10 +194,12 @@ body.dark-mode .filters {
     transition: background-color 0.2s;
 }
 
+/* Effet hover sur les labels */
 .filters .input-group-text:hover {
     background-color: #1d3a88;
 }
 
+/* Champs de saisie et sélection */
 .filters .form-control,
 .filters .form-select {
     border-radius: 0 6px 6px 0;
@@ -174,6 +209,7 @@ body.dark-mode .filters {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+/* Effet focus sur les champs */
 .filters .form-control:focus,
 .filters .form-select:focus {
     border-color: var(--primary);
@@ -181,7 +217,10 @@ body.dark-mode .filters {
     outline: none;
 }
 
-/* Tableau */
+/* ========================================
+   TABLEAU
+   Tableau d'affichage des données principales
+   ======================================== */
 .table {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
@@ -190,11 +229,13 @@ body.dark-mode .filters {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Tableau en mode sombre */
 body.dark-mode .table {
     background-color: #1f2937;
     border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* En-têtes de colonnes du tableau */
 .table th {
     background-color: var(--secondary);
     color: white;
@@ -206,10 +247,12 @@ body.dark-mode .table {
     transition: background-color 0.2s;
 }
 
+/* Effet hover sur les en-têtes (pour le tri) */
 .table th:hover {
     background-color: #374151;
 }
 
+/* Cellules du tableau */
 .table td {
     font-size: 0.875rem;
     vertical-align: middle;
@@ -217,6 +260,7 @@ body.dark-mode .table {
     border-color: rgba(0, 0, 0, 0.05);
 }
 
+/* Badges de statut dans le tableau */
 .table .badge {
     font-size: 0.75rem;
     font-weight: 500;
@@ -225,31 +269,40 @@ body.dark-mode .table {
     text-transform: capitalize;
 }
 
+/* Badge de succès (conforme) */
 .table .badge.bg-success {
     background-color: var(--success);
 }
 
+/* Badge de danger (non-conforme) */
 .table .badge.bg-danger {
     background-color: var(--danger);
 }
 
+/* Lignes du tableau */
 .table tbody tr {
     transition: background-color 0.2s ease;
 }
 
+/* Effet hover sur les lignes */
 .table tbody tr:hover {
     background-color: #f1f5f9;
 }
 
+/* Effet hover sur les lignes en mode sombre */
 body.dark-mode .table tbody tr:hover {
     background-color: #374151;
 }
 
-/* Pagination */
+/* ========================================
+   PAGINATION
+   Navigation entre les pages de données
+   ======================================== */
 .pagination {
     margin-top: 1rem;
 }
 
+/* Liens de pagination */
 .pagination .page-link {
     color: var(--primary);
     border-radius: 6px;
@@ -260,23 +313,29 @@ body.dark-mode .table tbody tr:hover {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* Page active dans la pagination */
 .pagination .page-item.active .page-link {
     background-color: var(--primary);
     border-color: var(--primary);
     color: white;
 }
 
+/* Effet hover sur les liens de pagination */
 .pagination .page-link:hover {
     background-color: #e5e7eb;
     color: var(--primary);
 }
 
+/* Effet hover en mode sombre */
 body.dark-mode .pagination .page-link:hover {
     background-color: #374151;
     color: #e5e7eb;
 }
 
-/* Loader */
+/* ========================================
+   LOADER
+   Indicateur de chargement
+   ======================================== */
 .loader {
     position: fixed;
     top: 50%;
@@ -288,37 +347,51 @@ body.dark-mode .pagination .page-link:hover {
     border-radius: 8px;
 }
 
+/* Loader en mode sombre */
 body.dark-mode .loader {
     background: rgba(31, 41, 55, 0.9);
 }
 
+/* Spinner de chargement */
 .loader .spinner-border {
     width: 2.5rem;
     height: 2.5rem;
     border-width: 0.3em;
 }
 
-/* Toast */
+/* ========================================
+   TOAST
+   Notifications contextuelles
+   ======================================== */
 .toast-container {
     z-index: 10000;
 }
 
+/* Toast d'erreur */
 .toast.text-bg-danger {
     background-color: var(--danger);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(153, 27, 27, 0.3);
 }
 
+/* Contenu du toast */
 .toast .toast-body {
     font-size: 0.875rem;
     color: #ffffff;
 }
 
-/* Responsivité */
+/* ========================================
+   RESPONSIVITÉ
+   Adaptations pour les différentes tailles d'écran
+   ======================================== */
+
+/* Tablettes et écrans moyens (max 992px) */
 @media (max-width: 992px) {
     .card {
         margin-bottom: 1.5rem;
     }
+    
+    /* Filtres en mode colonne sur tablette */
     .filters .input-group {
         flex-direction: column;
         align-items: stretch;
@@ -330,14 +403,20 @@ body.dark-mode .loader {
         margin-bottom: 0.5rem;
         width: 100%;
     }
+    
+    /* Tableau responsive - Réduction de la taille */
     .table th,
     .table td {
         padding: 0.5rem;
         font-size: 0.8rem;
     }
+    
+    /* Masquer les en-têtes sur tablette */
     .table thead {
         display: none;
     }
+    
+    /* Transformer les lignes en cartes */
     .table tbody tr {
         display: block;
         margin-bottom: 0.75rem;
@@ -345,15 +424,21 @@ body.dark-mode .loader {
         border-radius: 6px;
         background-color: #ffffff;
     }
+    
+    /* Lignes en mode sombre */
     body.dark-mode .table tbody tr {
         background-color: #1f2937;
         border-color: rgba(255, 255, 255, 0.1);
     }
+    
+    /* Cellules en mode carte */
     .table tbody td {
         display: block;
         text-align: right;
         padding: 0.5rem 1rem;
     }
+    
+    /* Labels des cellules en mode responsive */
     .table tbody td:before {
         content: attr(data-label);
         font-weight: 500;
@@ -362,6 +447,8 @@ body.dark-mode .loader {
         font-size: 0.75rem;
         color: var(--text-muted);
     }
+    
+    /* Labels spécifiques pour chaque colonne */
     .table tbody td[data-label="Nom"]:before { content: "Nom"; }
     .table tbody td[data-label="Casque"]:before { content: "Casque"; }
     .table tbody td[data-label="Gilet"]:before { content: "Gilet"; }
@@ -371,7 +458,9 @@ body.dark-mode .loader {
     .table tbody td[data-label="Alertes"]:before { content: "Alertes"; }
 }
 
+/* Mobiles (max 576px) */
 @media (max-width: 576px) {
+    /* Réduction des tailles de texte sur mobile */
     .card .display-5 {
         font-size: 1.5rem;
     }
