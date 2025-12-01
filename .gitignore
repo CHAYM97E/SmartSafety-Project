@@ -18,12 +18,11 @@ Thumbs.db
 # Logs
 *.log
 
-# Models
-*.pt
+
 
 # Data
 *.db
-*.sqlite3
+*.postegrySql
 
 # Jupyter Notebook
 .ipynb_checkpoints
